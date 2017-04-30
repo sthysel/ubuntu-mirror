@@ -18,11 +18,13 @@ arch=i386,amd64
 #
 section=main,restricted,universe,multiverse
 
-# Release=      -d      # Release of the system (...Hardy, Intrepid... Lucid, Precise, Quantal, Saucy, Trusty ), and the -updates and -security ( -backports can be added if desired)
+# Release of the system (Saucy, Trusty, Xenial ), and the -updates and -security ( -backports can be added if desired)
+# Release=      -d      
 # List of updated releases in: https://wiki.ubuntu.com/Releases
 #
 
-release=trusty,trusty-security,trusty-updates
+# release=trusty,trusty-security,trusty-updates
+release=xenial,xenial-security,xenial-updates
 
 # Server=       -h      # Server name, minus the protocol and the path at the end
 # CHANGE "*" to equal the mirror you want to create your mirror from. au. in Australia  ca. in Canada.

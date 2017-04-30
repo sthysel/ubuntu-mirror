@@ -7,7 +7,7 @@ sources.
 
 * This tool will be run on a late Ubuntu server (It can be run on any machine that has `debmirror` installed,
   the recipie below needs to be tweeked for that)
-* You have ~200G of disk space and bandwith available
+* You have ~200G of disk space and bandwith available per release you want to mirror. Assuming both i686 and amd64 arches.
 
 ## Install
 
@@ -19,13 +19,14 @@ You want the system gpg key in ./keyring:
 $ gpg --no-default-keyring --keyring ./keyring/trustedkeys.gpg --import /usr/share/keyrings/ubuntu-archive-keyring.gpg
 ```
 
-Now fuxor with mirror.sh to your liking. The knobs that can be tuned are documented in the script.
+Now fuxor with mirror.sh to your liking. The knobs that can be tuned are documented in the script. 
 
 
-Run ```mirror.sh```, it will take as long as 200G will take given your bandwith.
+Run ```mirror.sh```, its going to take a few hours at least, depending on the releases you want and the architectures of those.
+So to only get the i386 of Trusty comes to about 120G.
 
 
-The repo structure will end up looking like so:
+If selecting only Trusty the repo structure will end up looking like so:
 
 ```
 .
@@ -64,9 +65,11 @@ The repo structure will end up looking like so:
 │   │       └── dists/
 │   └── Archive-Update-in-Progress-elim
 ├── .gitignore
-├── mirror.sh*
+├── mirror.sh
 └── README.md
 ```
+
+The `dists` directory will have a set of release specific directories, here there is only trusty.
 
 Once the repo has synced you van expose it over http using nginx, apache or the like.
 
