@@ -1,12 +1,12 @@
 # Tool to mirror Ubuntu repos
 
-This tool mirrors Ubuntu repositries for use in Cobbler or other alternative local
+This tool mirrors Ubuntu repositories for use in Cobbler or other alternative local
 sources.
 
 ## Assumptions
 
 * This tool will be run on a late Ubuntu server (It can be run on any machine that has `debmirror` installed,
-  the recipie below needs to be tweeked for that)
+  the recipe below needs to be tweeked for that)
 * You have ~200G of disk space and bandwith available per release you want to mirror. Assuming both i686 and amd64 arches.
 
 ## Install
