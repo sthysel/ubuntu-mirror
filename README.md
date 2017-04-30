@@ -70,3 +70,7 @@ The repo structure will end up looking like so:
 
 Once the repo has synced you van expose it over http using nginx, apache or the like.
 
+
+# Resources
+
+* https://help.ubuntu.com/community/Debmirror
